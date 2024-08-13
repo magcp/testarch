@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://malaman.github.io/js-image-zoom/package/js-image-zoom.js" type="application/javascript"></script>
+
+    <style>
+        @font-face {
+            font-family: 'Yanone Kaffeesatz'; /*a name to be used later*/
+            src: url('./font/YanoneKaffeesatz-VariableFont_wght.ttf'); /*URL to font*/
+        }
+
+        body {
+            background-color: rgb(206, 227, 222);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20vh;
+            z-index: 100;
+            /*            background: white;
+        */ /*background: linear-gradient(0deg, white 75%, rgba(255, 255, 255, 0.9) 80%, rgba(255, 255, 255, 0.25) 95%, rgba(255, 255, 255, 0) 100%);*/
+        }
+
+        .text {
+            font-family: "Yanone Kaffeesatz";
+            font-size: 100px;
+            display: flex;
+            position: relative;
+            /* bottom: 20vh;*/
+            top: 10vh;
+            left: 50%;
+            transform: translateX(-50%);
+            user-select: none;
+            width: 100%;
+            text-align: center;
+            /*            background: linear-gradient(0deg, white 75%, rgba(255, 255, 255, 0.9) 80%, rgba(255, 255, 255, 0.25) 95%, rgba(255, 255, 255, 0) 100%);
+        */
+        }
+
+            .text .wrapper {
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 20px;
+            }
+
+                .text .wrapper .letter {
+                    transition: ease-out 1s;
+                    transform: translateY(40%);
+                }
+
+                .text .wrapper .shadow {
+                    transform: scale(1, -1);
+                    color: #999;
+                    transition: ease-in 5s, ease-out 5s;
+                }
+
+                .text .wrapper:hover .letter {
+                    transform: translateY(-100%);
+                }
+
+                .text .wrapper:hover .shadow {
+                    opacity: 0;
+                    transform: translateY(100%);
+                }
+
+        .marginlong {
+            margin-top: 90px;
+        }
+
+        body h1 {
+            font-weight: 600;
+        }
+
+        body hr {
+            width: 50px;
+            border: none;
+            border-bottom: 1px solid rgba(119, 119, 119, 0.25)
+        }
+
+        .container {
+            width: 60%;
+            margin: 1rem auto;
+            padding: 2rem;
+            text-align: justify;
+            transition: all 0.3s;
+        }
+
+            .container p {
+                line-height: 1.5;
+                letter-spacing: 0.3px;
+                word-spacing: 2px;
+            }
+
+                .container p:first-child::first-letter {
+                    color: #FE5F55;
+                    font-weight: bold;
+                    font-size: 70px;
+                    float: left;
+                    line-height: 60px;
+                    padding-right: 8px;
+                    margin-top: -3px;
+                }
+
+        @media screen and (max-width:600px) {
+            .container {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+
+        :root, [data-bs-theme=light] {
+            --bs-body-font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Fragmented Jungle</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Antithesis.html">Antithesis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./TheRooms.html">The Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Compsition.html">Compsition</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Physical.html">Physical</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <center>
+        <div class="text ">
+            <div class="wrapper">
+                <div id="L" class="letter">F</div>
+                <div class="shadow">F</div>
+            </div>
+            <div class="wrapper">
+                <div id="I" class="letter">R</div>
+                <div class="shadow">R</div>
+            </div>
+            <div class="wrapper">
+                <div id="G" class="letter">A</div>
+                <div class="shadow">A</div>
+            </div>
+            <div class="wrapper">
+                <div id="H" class="letter">G</div>
+                <div class="shadow">G</div>
+            </div>
+            <div class="wrapper">
+                <div id="T" class="letter">M</div>
+                <div class="shadow">M</div>
+            </div>
+            <div class="wrapper">
+                <div id="T" class="letter">E</div>
+                <div class="shadow">E</div>
+            </div>
+            <div class="wrapper">
+                <div id="N" class="letter">N</div>
+                <div class="shadow">N</div>
+            </div>
+            <div class="wrapper">
+                <div id="E" class="letter">T</div>
+                <div class="shadow">T</div>
+            </div>
+            <div class="wrapper">
+                <div id="S" class="letter">E</div>
+                <div class="shadow">E</div>
+            </div>
+            <div class="wrapper">
+                <div id="Stwo" class="letter">D</div>
+                <div class="shadow">D</div>
+            </div>
+            <div class="wrapper">
+                <div id="T" class="letter"> </div>
+                <div class="shadow"> </div>
+            </div>
+            <div class="wrapper">
+                <div id="T" class="letter">J</div>
+                <div class="shadow">J</div>
+            </div>
+            <div class="wrapper">
+                <div id="T" class="letter">U</div>
+                <div class="shadow">U</div>
+            </div>
+            <div class="wrapper">
+                <div id="T" class="letter">N</div>
+                <div class="shadow">N</div>
+            </div>
+            <div class="wrapper">
+                <div id="T" class="letter">G</div>
+                <div class="shadow">G</div>
+            </div>
+            <div class="wrapper">
+                <div id="T" class="letter">L</div>
+                <div class="shadow">L</div>
+            </div>
+            <div class="wrapper">
+                <div id="T" class="letter">E</div>
+                <div class="shadow">E</div>
+            </div>
+        </div>
+    </center>
+    <div class=" marginlong">
+
+        <div class=" ">
+            <center>
+                <div id="img-container" style="width:800px;">
+                    <img src="./images/2GAX_Virgil_FA22_Taher_Abbas_Patel_Parth_DS_11 (1).png" class="fill" width="100%" />
+                </div>
+            </center>
+            <div class="container">
+                <p>
+                    Our approach was to focus on two concepts, namely fast decomposition versus slow decomposition and the impact of the elements of nature on the built environment. These concepts were critical to our design process as they provided us with a framework for conceptualizing our ideas.
+                    The process above.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+
+    var options1 = {
+        fillContainer: true,
+        width: 300,
+        offset: { vertical: 0, horizontal: 10 }
+    };
+
+    // If the width and height of the image are not known or to adjust the image to the container of it
+    var options2 = {
+        fillContainer: true, "zoomPosition": "original",
+        offset: { vertical: 0, horizontal: 5 }
+    };
+
+    new ImageZoom(document.getElementById("img-container"), options2);
+
+</script>
+</html>
+<!-- https://codepen.io/kajetan-orski/pen/YzQObKg
+    https://github.com/malaman/js-image-zoom?tab=readme-ov-file
+    https://codepen.io/vsharma20v/pen/xxZgVVE
+    -->

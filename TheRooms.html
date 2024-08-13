@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./font/Vox/stylesheet.css" rel="stylesheet">
+        <style>
+            @font-face {
+                font-family: 'Yanone Kaffeesatz'; /*a name to be used later*/
+                src: url('./font/YanoneKaffeesatz-VariableFont_wght.ttf'); /*URL to font*/
+            }
+    
+            body {
+                background-color: rgb(206, 227, 222);
+                font-family: 'Vox';
+            }
+    
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 20vh;
+                z-index: 100;
+                /*            background: white;
+            */ /*background: linear-gradient(0deg, white 75%, rgba(255, 255, 255, 0.9) 80%, rgba(255, 255, 255, 0.25) 95%, rgba(255, 255, 255, 0) 100%);*/
+            }
+    
+            .text {
+                font-family: "Yanone Kaffeesatz";
+                font-size: 100px;
+                display: flex;
+                position: relative;
+                /* bottom: 20vh;*/
+                top: 10vh;
+                left: 50%;
+                transform: translateX(-50%);
+                user-select: none;
+                width: 100%;
+                text-align: center;
+                /*            background: linear-gradient(0deg, white 75%, rgba(255, 255, 255, 0.9) 80%, rgba(255, 255, 255, 0.25) 95%, rgba(255, 255, 255, 0) 100%);
+            */
+            }
+    
+                .text .wrapper {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    padding-top: 20px;
+                }
+    
+                    .text .wrapper .letter {
+                        transition: ease-out 1s;
+                        transform: translateY(40%);
+                    }
+    
+                    .text .wrapper .shadow {
+                        transform: scale(1, -1);
+                        color: #999;
+                        transition: ease-in 5s, ease-out 5s;
+                    }
+    
+                    .text .wrapper:hover .letter {
+                        transform: translateY(-100%);
+                    }
+    
+                    .text .wrapper:hover .shadow {
+                        opacity: 0;
+                        transform: translateY(100%);
+                    }
+    
+            .marginlong {
+                margin-top: 90px;
+            }
+    
+            body h1 {
+                font-weight: 600;
+            }
+    
+            body hr {
+                width: 50px;
+                border: none;
+                border-bottom: 1px solid rgba(119, 119, 119, 0.25)
+            }
+    
+            .container {
+                width: 60%;
+                margin: 1rem auto;
+                padding: 2rem;
+                text-align: justify;
+                transition: all 0.3s;
+            }
+    
+                .container p {
+                    line-height: 1.5;
+                    letter-spacing: 0.3px;
+                    word-spacing: 2px;
+                }
+    
+                    .container p:first-child::first-letter {
+                        color: #FE5F55;
+                        font-weight: bold;
+                        font-size: 70px;
+                        float: left;
+                        line-height: 60px;
+                        padding-right: 8px;
+                        margin-top: -3px;
+                    }
+    
+            @media screen and (max-width:600px) {
+                .container {
+                    width: 100%;
+                    padding: 1rem;
+                }
+            }
+    
+            :root, [data-bs-theme=light] {
+                --bs-body-font-size: 1rem;
+            }
+            
+nav {
+  background-color: white;
+  width: 100%;
+  box-sizing: content-box;
+}
+        </style>
+    </head>
+<body>
+    <nav class="container navbar navbar-expand-lg  navbar-bold bg-light" style="width:100%">
+
+        <div class="row" style="width:100%;font-size:20pt">
+            <div class="col-3">
+                <a class="nav-link" href="index.html">Home&nbsp;&nbsp;&nbsp;</a>
+            </div>
+            <div class="col-3">
+                <a class="nav-link" href="./Antithesis.html">Antithesis&nbsp;&nbsp;&nbsp;</a>
+            </div>
+            <div class="col-3">
+                <a class="nav-link" href="./TheRooms.html">The Rooms&nbsp;&nbsp;&nbsp;</a>
+            </div>
+            <div class="col-3">
+                <a class="nav-link" href="./Compsition.html">Compsition&nbsp;&nbsp;</a>
+            </div>
+
+        </div>
+    </nav>
+    <center>
+        <h1>The Rooms</h1>
+    </center>
+    <div class=" container">
+
+        <div class="row" style="padding-top:50px;">
+            <div class="col-4">
+                <div class="container1 text1">
+
+                    <p>
+                        The Art Room: The art room has been thoughtfully designed to provide an optimal environment for students to explore their creativity and develop their artistic skills. One key feature of the room is the presence of different spaces that cater to different aspects of the artistic process. For example, there is a dedicated art gallery within the room where students can showcase their completed works and receive feedback from their peers and instructors.
+                    </p>
+                </div>
+            </div>
+            <div class="col-8">
+                <div id="img-container" class="">
+                    <img src="./images/ArtRoom.png" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top:50px;">
+            <div class="col-8">
+                <div id="img-container1" class="" style="padding-top:10px;padding-bottom:10px;">
+                    <img src="./images/Playroom (1).png" class="img-fluid" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="container1 text2">
+
+                    <p>
+                        The Play Room: The playroom is an essential space that emphasizes the importance of play and self-expression for children. It serves as a valuable outlet for children to disengage from the typical classroom routine and engage in activities that allow them to explore and learn in new ways.The playroom features a diverse mix of entertainment options that cater to different types of play. Some activities are more active and physical, encouraging children to use their bodies and burn off energy, while others are more quiet and cerebral.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- https://codepen.io/kajetan-orski/pen/YzQObKg
+    https://codepen.io/vsharma20v/pen/xxZgVVE
+    -->
